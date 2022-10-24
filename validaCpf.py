@@ -28,7 +28,7 @@ def geraCpfValido():
 
     return geraDigitosVerificadores(stringGeraCpf)
 
-def valida_cpf(cpf):
+def validaNumeroCpf(cpf):
     cpf = cpf.replace('.','').replace('-','')
     if len(cpf) != 11:
         return False
@@ -43,6 +43,3 @@ def geraListaCpf(qtd):
     for x in range(qtd):
         listaCpf.append(geraCpfValido())
     return listaCpf
-
-
-print(geraListaCpf(10))
