@@ -1,17 +1,23 @@
 #Crie as seguintes funções: valida_cpf(), gera_cpf_valido() e gera_lista_cpfs()
 from random import randint as rint
 
+def geraDv1(cpf):
+    soma1 = [int(numero)*(multiplicador+2) for multiplicador,numero in enumerate(cpf[::-1])]
+    dv1 = (sum(soma1))*10%11
+    return dv1
+
+def geraDv2(cpf,dv1):
+    soma2 = [int(numero)*(multiplicador+3) for multiplicador,numero in enumerate(cpf[::-1])]
+    dv2 = ((sum(soma2)) + (dv1*2)) * 10 % 11
+    return dv2
+
 def geraDigitosVerificadores(cpf):
 
     if len(cpf) != 9:
         return False
     
-    soma1 = [int(numero)*(multiplicador+2) for multiplicador,numero in enumerate(cpf[::-1])]
-    dv1 = (sum(soma1))*10%11
-    
-
-    soma2 = [int(numero)*(multiplicador+3) for multiplicador,numero in enumerate(cpf[::-1])]
-    dv2 = ((sum(soma2)) + (dv1*2)) * 10 % 11
+    dv1 = geraDv1(cpf)
+    dv2 = geraDv2(cpf,dv1)
 
     dv1 = str(dv1%10)
     dv2 = str(dv2%10)
