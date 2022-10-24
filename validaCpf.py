@@ -9,7 +9,6 @@ def geraDigitosVerificadores(cpf):
     soma1 = [int(numero)*(multiplicador+2) for multiplicador,numero in enumerate(cpf[::-1])]
     dv1 = (sum(soma1))*10%11
     
-    
 
     soma2 = [int(numero)*(multiplicador+3) for multiplicador,numero in enumerate(cpf[::-1])]
     dv2 = ((sum(soma2)) + (dv1*2)) * 10 % 11
@@ -34,7 +33,6 @@ def validaNumeroCpf(cpf):
         return False
     cpfVerificado = cpf[:9]
     cpfVerificado = geraDigitosVerificadores(cpfVerificado)
-    print(cpfVerificado)
     return cpfVerificado == cpf
 
 
@@ -43,3 +41,6 @@ def geraListaCpf(qtd):
     for x in range(qtd):
         listaCpf.append(geraCpfValido())
     return listaCpf
+
+
+print(validaNumeroCpf(geraCpfValido()))
