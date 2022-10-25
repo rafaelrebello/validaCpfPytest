@@ -1,6 +1,6 @@
 ## validaCpfPytest
 
-### programa criado na disciplina de 
+### programa criado na disciplina de Programação 2 para o curso de Sistemas de Informação
 
 ---
 
