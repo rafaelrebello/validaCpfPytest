@@ -10,7 +10,6 @@ def geraDv1(cpf):
     dv1 = (sum(soma1)) * 10 % 11
     return dv1
 
-
 def geraDv2(cpf, dv1):
     soma2 = [
         int(numero) * (multiplicador + 3)
@@ -45,9 +44,12 @@ def geraCpfValido():
 
 
 def validaNumeroCpf(cpf):
+    cpf = str(cpf)
     cpf = cpf.replace(".", "").replace("-", "")
+
     if len(cpf) != 11:
         return False
+
     cpfVerificado = cpf[:9]
     cpfVerificado = geraDigitosVerificadores(cpfVerificado)
     return cpfVerificado == cpf
