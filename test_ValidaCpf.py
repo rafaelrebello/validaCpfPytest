@@ -26,3 +26,6 @@ def testGeraCpfValido():
 def testGeraListaCpf():
     assert len(geraListaCpf(10)) == 10
     assert len(geraListaCpf(100)) == 100
+
+def testgeraCpfValidoComMascara():
+    assert validaNumeroCpf(geraCpfValidoComMascara()) == True
