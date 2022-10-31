@@ -10,8 +10,8 @@
 
 1. Etapa 1: cálculo de DV1
 - Soma 1: soma dos produtos de cada dígito por um peso de 2 a 10, na ordem inversa (do nono para o primeiro).
-- Multiplique a soma 1 por 10 e calcule o resto da divisão do resultado por 11. Se der 10.
-- DV1 é zero,caso contrário o DV1 é o próprio resto.
+- Multiplique a soma 1 por 10 e calcule o resto da divisão do resultado por 11. 
+- Se der 10 DV1 é zero,caso contrário o DV1 é o próprio resto.
 
 2. Etapa 2: cálculo de DV2
 - Soma 2: soma dos produtos de cada dígito por um peso de 3 a 11, também na ordem inversa.
